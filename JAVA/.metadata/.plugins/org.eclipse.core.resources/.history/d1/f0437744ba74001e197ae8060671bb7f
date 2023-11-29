@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class MultiploDeOtro {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int num1 = sc.nextInt(), num2 = sc.nextInt();
+		
+        while (true ) {
+        	if ( num1 == 0) {
+        		System.out.println("saliendo del programa");
+        		break;
+        	}
+        	
+        	if ( num1 % num2 == 0 ) {
+		      System.out.println(num1 + " es multiplo de: " + num2);
+		      break;
+		 } else if ( num2 % num1 == 0) {
+			 System.out.println(num2 + "es multiplo de: " +  num1);
+			 break;
+		 } else {
+			 System.out.println("no son multiplos");
+			 break;
+		 }
+       }	
+      
+		num1 = sc.nextInt();
+		System.out.println("FIN DEL PROGRAMA");
+	 
+		
+		
+	}	
+}

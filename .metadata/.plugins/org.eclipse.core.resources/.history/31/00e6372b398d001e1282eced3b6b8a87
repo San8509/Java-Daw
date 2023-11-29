@@ -1,0 +1,18 @@
+
+public class ExamenSantiago {
+
+	/*
+	 * Ramiro Santiago Velazuqez
+	 * 
+	 */
+	
+	
+	public static void main(String[] args) {
+	
+		String cadena = "Ramiro Santiago Velazquez";
+		
+		
+
+	}
+
+}

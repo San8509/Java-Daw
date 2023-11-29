@@ -1,0 +1,33 @@
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
+public class ExamenRSV {
+
+	/*
+	 * Ramiro Santiago Velazquez
+	 * 
+	 * */
+	
+	public static void main(String[] args) {
+		
+		// declaro la hora del comienzo
+		System.out.println("A que hora empiezas a estudiar");
+		LocalTime start = LocalTime.of(12, 30, 30);
+        System.out.println(start);
+        
+        // declaro la hora del final
+        System.out.println("A q hora terminas de estudiar");
+        LocalTime end = LocalTime.of(16, 0, 00);
+        System.out.println(end);
+        
+        
+        long horas = ChronoUnit.HOURS.between(start, end);
+    	System.out.println(horas);
+    	long minutos = ChronoUnit.MINUTES.between(start, end);
+    	System.out.println(minutos);
+    	long segundos = ChronoUnit.SECONDS.between(start, end);
+    	System.out.println(segundos);
+        
+	}
+
+}

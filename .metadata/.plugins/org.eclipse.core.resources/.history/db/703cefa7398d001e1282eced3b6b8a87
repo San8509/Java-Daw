@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ExamenSantiago {
+
+	/*
+	 * Ramiro Santiago Velazuqez
+	 * 
+	 */
+	
+	public static void Rerverso(String cadena) {
+		Scanner sc = new Scanner(System.in);
+		
+		String cadena = "Ramiro Santiago Velazquez";
+		String nuevaCadena = "";
+		
+		 for(int i = 0; i<cadena.length(); i++) {
+			 nuevaCadena = cadena.charAt(i) + nuevaCadena;          
+	   }
+	   System.out.print(nuevaCadena);
+	}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+	
+		String cadena = "Ramiro Santiago Velazquez";
+		String nuevaCadena = "";
+		
+		 for(int i = 0; i<cadena.length(); i++) {
+			 nuevaCadena = cadena.charAt(i) + nuevaCadena;          
+	   }
+	   System.out.print(nuevaCadena);
+	}
+
+}

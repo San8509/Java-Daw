@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ExamenSantiago {
+
+	/*
+	 * Ramiro Santiago Velazuqez
+	 * 
+	 */
+	
+	public static void Reverso(String cadena) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Introduce tu cadena");
+	    cadena = sc.nextLine();
+		String nuevaCadena = "";
+		
+		 for(int i = 0; i<cadena.length(); i++) {
+			 nuevaCadena = cadena.charAt(i) + nuevaCadena;          
+	   }
+	   System.out.print(nuevaCadena);
+	}
+		
+		
+	
+	
+	public static void main(String[] args) {
+	  Scanner sc = new Scanner(System.in);
+
+	  Reverso("");
+  }	  
+}

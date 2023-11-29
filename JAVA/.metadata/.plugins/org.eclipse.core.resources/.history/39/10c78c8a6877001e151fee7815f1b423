@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class AreaCirculo {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("introduce un radio: ");
+		sc.useLocale(Locale.US);
+		
+		//formula area circulo, usamos algunos de los metodos deMath
+		
+
+	}
+
+}

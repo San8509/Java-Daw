@@ -1,0 +1,75 @@
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class ExamenRSV {
+
+	/*
+	 * Ramiro Santiago Velazquez
+	 * 
+	 * */
+	
+	public static void Segundos() {
+		Scanner sc = new Scanner(System.in);
+		
+		int horas=0;
+		int minutos=0;
+		int segundos=0;
+		
+		System.out.println("introduce la primera hora");
+		horas = sc.nextInt(); minutos = sc.nextInt(); segundos = sc.nextInt();
+		LocalTime start = LocalTime.of(horas, minutos, segundos);
+		
+		System.out.println("introduce la segunda hora");
+		horas = sc.nextInt(); minutos = sc.nextInt(); segundos = sc.nextInt();
+		LocalTime end = LocalTime.of(horas, minutos, segundos);
+		
+		// diferencia de segundos entre las dos horas
+		long seconds = ChronoUnit.SECONDS.between(start, end);
+		
+		
+	}
+	
+	
+	public static void DiferenciaTiempo(int horas, int minutos, int segundos) {
+	  Scanner sc = new Scanner(System.in);
+		horas=0;
+		minutos=0;
+		segundos=0;
+		
+		
+		// declaro la hora del comienzo con entrada por teclado
+		System.out.println("A que hora empiezas a estudiar");
+		horas = sc.nextInt(); minutos = sc.nextInt(); segundos = sc.nextInt();
+		LocalTime start = LocalTime.of(horas, minutos, segundos);
+        System.out.println(start);
+        
+        // declaro la hora del final con entrada por tecado
+        System.out.println("A q hora terminas de estudiar");
+        horas = sc.nextInt(); minutos = sc.nextInt(); segundos = sc.nextInt();
+		LocalTime end = LocalTime.of(horas, minutos, segundos);
+        System.out.println(end);
+        
+        // diferencia entre valores
+        long hour = ChronoUnit.HOURS.between(start, end);
+    	long minuts = ChronoUnit.MINUTES.between(start, end);
+    	long seconds = ChronoUnit.SECONDS.between(start, end);
+        
+         // Muestro el resultado de la diferencia
+    	System.out.println("Has estudiado programacion: "+hour+" horas :"+minuts+" minutos y "+seconds+" segundos"); 
+    	
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+    	
+		DiferenciaTiempo(0,0,0);
+    	
+    	
+        
+	}
+
+}

@@ -1,0 +1,88 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ExamenRepaso {
+	
+	public static boolean Vocales() {
+	   Scanner sc = new Scanner(System.in);
+	   // cantidad de vocales en una frase
+	   
+	   //declaro un boolean
+	   boolean vocal= false;
+	   // caracteres q deben estar en la entrada 
+	   int contador =0;
+	   char[] caracter = {'a', 'e', 'i', 'o', 'u'};
+	   char[] aChar ;
+	   System.out.println("introduce la cadena");
+	    String entrada = sc.nextLine();
+	    // paso la entrada a char
+	      aChar = entrada.toCharArray();
+	  
+	   for (int i = 0; i < aChar.length; i++) {
+		  
+		   for( int j = 0; j < caracter.length; j++) {   
+			   if ( Arrays.equals(aChar, caracter) ) {
+				   contador++;
+				   if (contador > 5) 
+					   vocal = true;
+			   } else {
+				   vocal = false;
+			   }
+		   }
+	   }
+	   
+	   System.out.println(vocal);
+		return vocal;
+		
+       /*for(int i = 0; i < entrada.length(); i++) {
+    	     
+            for( int a=0 ; a < caracter.length; a++) {
+            	if(entrada.charAt(i) == caracter[a]) {
+            		vocal = true;
+            	} else {
+            		vocal = false;
+            	}
+            }*/
+	}
+	
+	public static void invertirPalabra(String word) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Introduce tu cadena");
+	     word = sc.nextLine();
+		String safe="";
+		
+		for(int i = word.length() -1; i >= 0; i--) {
+			safe += word.charAt(i);
+		}
+		System.out.print(safe);
+		
+	}
+	
+	public static boolean Cadena(String one, String two) {
+		Scanner sc = new Scanner(System.in);
+		 
+		System.out.println("Ingresa la primera Cadena");
+		one= sc.nextLine(); 
+		System.out.println("Ingresa la segunda Cadena");
+		two=sc.nextLine();
+		
+		boolean si = one.contains(two);
+		
+		System.out.println("La cadena es: "+ si);
+		return si;
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		//Cadena("", "");
+		//invertirPalabra("");
+		
+		Vocales();
+		
+		
+		
+	}	 
+
+}
