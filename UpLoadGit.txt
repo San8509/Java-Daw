@@ -1,0 +1,25 @@
+Pasos para subir repositorio a github
+1-git new repositorie
+agregar el nombre en git - crear repositorio
+
+2-git bash here
+-en la consola
+
+1-git init ( iniciamos el repositorio ) git status para ver el estado 
+2-git add . (si queremos agregar algun archivo en especifico lo ponemos antes del punto, para agregarlo todo damos
+espacio y punto)
+
+3-git commit -m " " ( entre comillas ponemos el comentario o cambios q vayamos a subir al repositorio )
+
+4-git config --global user.email ramirosantiagovelazquez@gmail.com (configuramos el email q tengamos de usuario y enter)
+
+5-git config --global user.name santiago (nombre q tengamos configurado en el perfil)
+
+6-git config --global user.email ramirosantiagovelazquez@gmail.com (repetimos el git commit para q se carguen los archivos al repositorio)
+
+7-git branch -M main
+
+8-git remote add origin https://github.com/San8509/FRELANCE.git (agregamos el enlace de github)
+
+9-git push -u origin main (indicamos q vamos a hacer el push para sincronizar el local con el remoto)
+

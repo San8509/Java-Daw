@@ -36,7 +36,7 @@ public class ExamenRepaso {
 		return vocal;
 	}
 	
-	public static void invertirPalabra(String word) {
+	public static String invertirPalabra(String word) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Introduce tu cadena");
@@ -47,6 +47,7 @@ public class ExamenRepaso {
 			safe += word.charAt(i);
 		}
 		System.out.print(safe);
+		return safe;
 		
 	}
 	
@@ -65,27 +66,64 @@ public class ExamenRepaso {
 		return si;
 	}
 	
+	public static void split() {
+		//Strings
+				// Ejemplo de split() elimina los caracteres como espacio o coma de una cadena y 
+		        // crea un arrgeglo nuevo con la cadena anterior.
+		        String nombrePersonaje = "Rafael,,,,,  Nadal, ,,,, Parera";
+		        String[] partesDelNombre = nombrePersonaje.split(","); //caracter a eliminar
+				
+		        for( int i=0; i < partesDelNombre.length; i++ ) {
+		        	System.out.print(partesDelNombre[i]);
+		        }
+		        
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		//Cadena("", "");
-		//invertirPalabra("");
-		//Vocales();
+		// cadena
+		String cadena = "Santiago Velazquez";
+		String resultado ="";
 		
-		//Strings
-		// Ejemplo de split() eimina los caracteres como espacio o coma de una cadena y 
-        // crea un arrgeglo nuevo con la cadena anterior.
-        String nombrePersonaje = "Rafael,,,,,  Nadal, ,,,, Parera";
-        String[] partesDelNombre = nombrePersonaje.split(","); //caracter a eliminar
+		// cadena con los valores de reves
+		String temporal = "";	
+		for( int i= cadena.length()-1; i >=0; i--) {
+			temporal += cadena.charAt(i) ;
+	  }	
+			 
+        // divido la cadena original para los condicionales
+		String[] point = cadena.split(" ");
+		String name = point[0];
+		String lastName = point[1];	   
 		
-        for( int i=0; i < partesDelNombre.length; i++ ) {
-        	System.out.print(partesDelNombre[i]);
-        }
-        
-        
+	    // divido la cadena de reves para ajustar valores con los condicionales
+		String[] concat = temporal.split(" ");
+		String one = concat[0];
+		one = one.substring(1).toLowerCase();
+		String two = concat[1];	
+		two = two.substring(0).toLowerCase();
 		
 		
+		// condicionales is UpperCase or LowerCase
+		if ( Character.isUpperCase(name.charAt(0))) {
+			one = Character.toUpperCase(one.charAt(0)) + one.substring(1,one.length());
+		} else {
+			one.toLowerCase();
+		}
+		if ( Character.isUpperCase(lastName.charAt(0))) {
+			two = Character.toUpperCase(two.charAt(0)) + two.substring(1,two.length());
+		} else {
+			one.toLowerCase();
+		}
 		
-	}	 
-
+		System.out.println(cadena);
+		resultado = String.join(" ", one, two); //metodo para concatenar 
+		
+		// lo muestro por pantalla 
+		System.out.println(resultado);
+		
+	}
 }

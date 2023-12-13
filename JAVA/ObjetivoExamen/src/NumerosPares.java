@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class NumerosPares {
 
-	public static int Pares( int numero ) {
+	   static int pares( int numero ) {
 		Scanner sc = new Scanner(System.in);
 		  int digito = 0; int contador; int pares = 0; int resultado=0;
 		  
@@ -15,24 +15,20 @@ public class NumerosPares {
 	            //contador++;     // incrementa el contador de dígitos para saber la longitud del numero
 	            
 	            if (digito % 2 == 0) {    // si el dígito es par
-	                pares++;      // incrementa el contador de pares
-	                resultado += digito;    // añade el dígito par al resultado
+	            	resultado += digito;    // añade el dígito par al resultado
+	            	pares++;      // incrementa el contador de pares 
 	            }
 		  }
 		 System.out.println("Pares encontrados: "+ pares);
 		 System.out.println("total pares: "+ resultado);
 		return pares;
-	}
+}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+			int contador=pares(0); 
 		
-		int contador=0; 
-		
-		for(int i=0; i < Pares(0); i++) {
-			
-		}
-		 
-	}
-
+		     for(int i=0; i < contador; i++) {
+				}
+	  }
 }

@@ -64,7 +64,7 @@ public class ReviewString {
          }
          if(Character.isDigit(entrada.charAt(i))){ // numeros
             num += entrada.charAt(i);
-            n_num++;
+            n_Num++;
          }
          if(Character.isSpaceChar(entrada.charAt(i))){ // espacios
             nEspacios++;

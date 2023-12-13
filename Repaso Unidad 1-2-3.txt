@@ -1,0 +1,207 @@
+public class RepasoUnidad123 {
+
+	public static void main(String[] args) {
+		
+	
+1- System.out.println(12*13);
+    System.out.println(321-213);
+    System.out.println(301/3);
+    System.out.println(301%3);		
+	
+
+
+2- int n1=3; int n2=4; int n3=5; int resultado=n1+n2*n3;
+		
+   System.out.println("Ejemplo de precedencia de   operadores");
+   System.out.println("3+4*5");
+   System.out.println(resultado); 
+
+3- int a =5; int b=10;
+   System.out.println("La suma de 5 y 10 es: "+ (a+b));
+
+4- int numero1=87;
+   int numero2=94;
+   System.out.println(numero1*numero2);
+   b)-No se pueden inicializar variables con numeros
+
+    
+5- System.out.println("introduce el primer numero");
+   int num1=sc.nextInt();
+   System.out.println("introduce el segundo numero");
+   int num2=sc.nextInt();
+		
+   System.out.println(num1*num2);
+System.out.println("division: "+num1/num2+"   resto: "+num1%num2);
+		
+   System.out.println("introduce el primer numero");
+   int n1=sc.nextInt();
+   System.out.println("introduce el segundo numero");
+   int n2=sc.nextInt();
+   System.out.println();
+   System.out.println("introduce el tercer numero");
+   int n3=sc.nextInt();
+   System.out.println();
+	
+   System.out.println(n1+n2+n3);
+
+6- System.out.println("introduce las millas: ");		
+   int n=sc.nextInt();
+   int millas= n * 1852;
+   System.out.println(millas);
+
+7- int tabla=3;
+   int resultado=0;
+   for(int i=0; i <=10; i++) {
+	resultado= tabla * i;
+	System.out.println(tabla+" x "+i+" = "+resultado);	
+        }  
+
+
+10- System.out.println("introduce los grados celsius: ");
+    int n=sc.nextInt();
+    int kelvin= n +273;
+    int fahrenheit= n * 18/10 +32;
+		
+    System.out.print(kelvin); System.out.print("  "+fahrenheit);
+
+11- int n = 7;
+    System.out.printf("%d\n",n);
+    double n1= 10.4567;
+    DecimalFormat formato = new DecimalFormat("##.##");
+    System.out.println(formato.format(n1));
+ 		
+    String texto="Texto de prueba";
+    System.out.println(texto);
+	    
+	    char caracter= 'c';
+	    System.out.println(caracter);
+	    
+	    boolean esVerdadero= true;
+	    System.out.println(esVerdadero);
+	
+	    double cientifico= 1224342.453;
+	    formato = new DecimalFormat("#.##E0");
+	    String resultado = formato.format(cientifico);
+	    System.out.println(resultado);
+	    
+	    double porcentaje = 1.41;
+	    formato = new DecimalFormat("##.##%");
+	    String porciento = formato.format(porcentaje);
+	    System.out.println(porciento);
+	
+	    double largo = 12435656455.5467885;
+	    formato = new DecimalFormat("####.####");
+	    System.out.println(formato.format(largo));
+	    
+	    int alinearDerecha = 50;
+	    System.out.println("\t"+alinearDerecha);
+	    
+	    DateTimeFormatter miFormato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	    LocalDate miDate = LocalDate.parse("05/06/1990", miFormato);
+	    System.out.println(miDate.format(miFormato));
+
+
+
+12- System.out.println("Titulo:");
+	String titulo = sc.nextLine();
+	System.out.println("Autor:");
+	String autor = sc.nextLine();
+	System.out.println("Año de publicacion:");
+	int anyo = sc.nextInt();
+	System.out.println("Precio:");
+	double precio= sc.nextDouble();
+		
+		System.out.println("------------------------------------------------------------------------------------------------------------");
+	System.out.println("Informacion del libro");
+		System.out.println("------------------------------------------------------------------------------------------------------------");
+		
+	System.out.printf("Titulo:\t\t\t %s\n", titulo);
+	System.out.printf("Año de Publicacion:  %s\n", autor);
+	System.out.printf("Autor:\t\t\t %s\n", anyo);
+	System.out.printf("Precio:\t\t\t %s\n", precio);
+
+
+UNIDAD 3
+    int n=50;
+    int m=0;
+    
+    while(m<n){
+     m++;
+    System.out.print(m+", ");
+
+maximo comun divisor
+ 
+int a=sc.nextInt();
+int b=sc.nextInt(); 
+		
+for(int i=b;i>0 ; i--) {
+    if(a%i==0 && b%i==0) {
+   System.out.println("el maximo comun divisor es: "+i);
+   	break;
+   }	
+}
+
+
+	for (int i=20; i<=100; i++) {
+			if(i%10==0) {
+				continue;
+			} else if(i%2==0) {
+				System.out.print(i+" ");
+			}
+		}
+
+EJERCICIO 4 MAYOR-MENOR-MEDIA
+int counter=0;
+int media=0;
+int max=0;
+int min=0;
+int n=1;
+			   
+     while(n!= -1) {
+	System.out.println("introduce los numeros");
+	 n=sc.nextInt();
+	  media+=n;
+	   if(n > max) {
+	   max = n;		   
+          } else if(max > n) {
+          min= n;
+        }		   
+       counter++;
+    }  
+		      
+   media/=counter;
+			   
+System.out.println("Has introducido: "+counter+" numeros");
+		   System.out.println("Maximo: "+max);
+		   System.out.println("Minimo: "+min);
+		   System.out.println("Media: "+media );
+
+
+ESTA APROBADO
+funcion--
+static boolean estaAprobado( int nota, int notaMinima ) {
+        	if(nota >= notaMinima) {
+        		System.out.println("aprobado");
+        	} else if(nota < notaMinima) {
+        		System.out.println("suspenso");
+        	} 
+         return true;
+	}
+
+main---
+System.out.println("La nota minima para aprobar es: ");
+        int notaMinima = sc.nextInt();
+        int nota=0;
+  
+		for(int i=nota;  nota != -1; i++) {
+			  System.out.println("introduce la nota: ");
+		         nota = sc.nextInt();     
+		           if(nota== -1) {
+		        	 System.out.println("fin del programa");
+		        	 break;
+		         }
+		         estaAprobado(nota, notaMinima);
+		}
+
+ }
+}
