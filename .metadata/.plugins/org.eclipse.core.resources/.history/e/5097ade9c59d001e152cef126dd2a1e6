@@ -1,0 +1,15 @@
+
+public class CodigoMorse {
+
+	public static void main(String[] args) {
+		
+		String abcd = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		String[]morse= {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+	
+	    for(int i=0; i <= morse.length; i++) {
+	    	System.out.println(i);
+	    }
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class P_709 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+      
+		int n = sc.nextInt();
+		
+	  	int[] entrada = {n};
+	  	int[] num = {};  
+	  	
+	  	for(int i=0; i<=entrada.length; i++) {
+	  		
+	  		int entrada1 = sc.nextInt();  
+	  		for(int j=0; j<=entrada1; j++) {
+	  
+	  		}
+	  	}
+	  	
+
+	}	
+}
+
+

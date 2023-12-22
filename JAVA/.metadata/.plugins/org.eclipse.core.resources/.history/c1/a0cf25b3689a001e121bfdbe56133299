@@ -1,0 +1,91 @@
+import java.util.HashMap;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Area_Restringida {
+
+	
+    
+	public static void main(String[] args) {
+		// TAD tipos datos abstractos
+		
+	/*
+		// hashMap para mapear usuario y contraseña
+		HashMap<String, String> control = new HashMap<String, String>();
+		Scanner sc = new Scanner(System.in);
+		
+		String usuario =""; String contraseña=""; String admin = "Manager1.0";
+		
+		while(true) {
+			System.out.println("introduce tu usuario: ");
+			usuario=sc.nextLine();
+			System.out.println("introduce tu contraseña: ");
+			contraseña=sc.nextLine();  
+			areaAdministador(usuario, contraseña);
+			}
+		 */
+
+		
+        HashMap<String, String> usuarioSistema = new HashMap<String, String>();
+		
+	    // variables entrada de datos
+	    String usuario=" "; String contraseña="";
+	    String admin="Manager1.0"; // variable administrador
+        String passAdmin ="1234";   // password predefinido
+ 
+        usuario = JOptionPane.showInputDialog("ingresa tu usuario: ");
+	   // comprobar si es admin o usuario	   
+	    if(!usuario.equals(admin)) {
+	      for(int i=0; i<3; i++) {
+	   	     System.out.println("ha accedio al area restringida, tiene; "+(3-i)+" intentos");
+	   	     usuario = JOptionPane.showInputDialog("ingresa tu usuario: ");
+	   	     contraseña=JOptionPane.showInputDialog("ingresa tu contraseña: ");
+		      while(true) {
+		    	if(usuario.equals(admin)) {
+		    		continue;
+		         } else {
+		        	 System.out.println("no tiene acceso al area restringida");
+		    	    break;
+		     }
+	       }
+	    }
+	   
+	      System.out.println(usuario+ "  "+ contraseña);
+	      
+	    // comprobar si es el usuario del admin
+	    if(usuario.equals(admin) && contraseña.equals("admin")) {
+		  System.out.println("Ha accedido al área restringida como administrador");
+	    }
+		//registro de  nuevo usuario y password
+		  String entrada1= JOptionPane.showInputDialog("registrar nuevo usuario desde admin: ");
+		  String pasword1= JOptionPane.showInputDialog("registrar la nueva contraseña: ");
+		  usuarioSistema.put(entrada1, pasword1);
+			
+		// listar ( mostrar ) usuarios del sistema
+		 for(String clave: usuarioSistema.keySet()) {
+		      String valor = usuarioSistema.get(clave);
+		        System.out.println("usuario: "+ clave+ "  paswword: "+valor);
+		  }
+			// eliminar usuario del sistema
+			usuarioSistema.remove("man1");
+			// actualizar contraseña de usuario
+			usuarioSistema.replace("man2", "act2");
+			
+			System.out.println();
+			// listar ( mostrar ) usuarios del sistema
+		  for(String clave: usuarioSistema.keySet()) {
+				String valor = usuarioSistema.get(clave);
+				  System.out.println("usuario: "+ clave+ "  paswword: "+valor);
+		  }
+			
+			// salida del programa
+		   String salida =  JOptionPane.showInputDialog("Digite la salida");
+		   while(true) {
+		       if(salida.equals("fin")) 
+		          break;
+		      } 
+	       System.out.println("fin del programa");
+    
+	    }
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CodigoMorse {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String abcd = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		String[]morse= {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+	    
+		String entrada =sc.nextLine();
+	    for(String i: morse) {
+	    	if(entrada.indexOf(i) == morse[i]) {
+	    		
+	    	}
+	    	
+	    }
+	}
+}

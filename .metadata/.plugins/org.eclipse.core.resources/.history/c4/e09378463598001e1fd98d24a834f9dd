@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class RegistroNick {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Introduce tu nickname");
+		String name = sc.nextLine();
+		
+		if(name != "exit") {
+		for(int i=0; i<name.length(); i++) {
+			String[] nick= {name};
+			System.out.print(nick[i] +" ");
+	 	
+		    if(nick.equals(name) ) {
+			System.out.println("usuario ya existente");
+		    } else {
+			System.out.println("Usuario registrado con exito");
+		}
+	  }
+	}
+  }
+}

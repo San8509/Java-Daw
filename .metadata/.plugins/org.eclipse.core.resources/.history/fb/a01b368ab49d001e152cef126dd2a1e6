@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Calentamiento_Pre_Navideño {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	     
+		int a = sc.nextInt(); int b = sc.nextInt(); int c = sc.nextInt();
+		int A = Math.abs(a); int B = Math.abs(b); int C = Math.abs(c);
+		
+		
+		
+		
+	}
+
+}

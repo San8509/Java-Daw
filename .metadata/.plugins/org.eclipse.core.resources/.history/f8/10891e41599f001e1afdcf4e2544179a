@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class P_709 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+      
+	  	int entrada = sc.nextInt();
+	  	int[] num = {};  
+	  	
+	  	for(int i=0; i<entrada; i++) {
+	  		int entrada1 = sc.nextInt();
+	  		  int partes = entrada1 % 10;
+	  		for(int j=0; j<num.length; j++) {
+	  			num[i] = sc.nextInt();
+	  		}
+	  	}
+	  	
+
+	}	
+}
+
+

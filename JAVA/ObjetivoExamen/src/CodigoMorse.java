@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class CodigoMorse {
+	
+	static boolean caracterMayuscula( String[] abcd){
+	    
+        String specialCaracters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+        String c= "";
+        boolean encontrado = false;
+        
+        for(int i=0; i<abcd.length; i++) {
+        	 c = abcd[i];//recorre la contraseña
+        	
+        if(specialCaracters.indexOf(c) >= 0) {// comprueba si hay algun caracter igual en los arreglos
+        	   encontrado = true;
+               break;
+        	}
+        }
+        System.out.println(encontrado);
+    return encontrado;
+}
+	
+	
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[]abcd = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+		String[]morse= {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+	    
+		String entrada =sc.nextLine();
+		
+		caracterMayuscula(abcd);
+		
+	    
+	}
+}

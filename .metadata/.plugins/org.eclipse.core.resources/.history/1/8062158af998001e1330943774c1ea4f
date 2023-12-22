@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Random;
+
+public class Num_1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+            ArrayList<Integer> num = new ArrayList<Integer>();
+            
+            while(true) {
+            	System.out.println("introduce el numero");
+            	int n = sc.nextInt();
+               if(n < 0) {
+            	break;
+                }
+            	num.add(n);
+            }
+            
+            System.out.println(num);
+            num.add(0, 101);
+            System.out.println(num);
+            
+            if(num.contains(101) && num.contains(-1)) {
+            	System.out.println("X: encontrado");
+            } else {
+            	System.out.println("X: no encontrado");
+            }
+            
+            int media=0;
+            for(Integer i: num) {
+            	media += i;
+            }
+            System.out.println(media / num.size());
+            
+            System.out.println(num.get(4));
+            
+            num.add(+1); //modificar el ultimo elemento 
+            num.remove(0); //eliminar el elemento en la posicion indicada
+            System.out.println(num);
+            
+            Collections.sort(num); // orden de menor a mayor
+            System.out.println(num);
+            
+            Collections.reverse(num); // orden inverso
+            System.out.println(num);
+            
+            Collections.shuffle(num);// orden aleatorio
+            System.out.println(num);
+            
+            ArrayList<Integer> nueva = new ArrayList<Integer>();
+            Random r = new Random();
+            
+            int ran = r.nextInt(5) * 100;
+            System.out.println(ran);
+            
+            
+            
+       
+	}
+}

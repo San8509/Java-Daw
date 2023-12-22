@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Calentamiento_Pre_Navideño {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	     
+		System.out.println("introduce los años");
+		int a = sc.nextInt(); int b = sc.nextInt(); int c = sc.nextInt();
+		int A = Math.abs(a); int B = Math.abs(b); int C = Math.abs(c);
+         
+		  int d1 = A-B; 
+		  int d2 = C-B;
+		
+		if(d1 < d2) {
+			System.out.println(A);
+		} else if (d1 == d2) {
+			System.out.println("EMPATE");
+		} else {
+			System.out.println(B);
+		}
+		
+		
+	}
+
+}

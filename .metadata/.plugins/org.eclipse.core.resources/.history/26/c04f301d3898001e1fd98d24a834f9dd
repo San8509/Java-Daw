@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class RegistroNick {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		List<String> listaNick = new ArrayList<String>();
+		String name ="";
+		
+		
+		while( true ) {
+			System.out.println("Introduce tu nickname");
+			name =sc.nextLine();
+            listaNick.add(name);	
+		    
+            if(name.equals("exit") ) {
+			  break;
+		    } else if(listaNick.contains(name)) {
+	        System.out.println("Usuario ya registrado");	
+	        } else {
+	        	System.out.println("registrado con exito");
+	        }
+	}
+  }
+}
